@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import leaf from "../../Assets/Projects/leaf.png";
 import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
+import foodOrdering from "../../Assets/Projects/foodOrdering.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import taskDashboard from "../../Assets/Projects/taskDashboard.png";
 import project1 from "../../Assets/Projects/project1.png";
@@ -39,17 +39,16 @@ function Projects() {
             demoLink="https://your-demo-link.com"
           />
         </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
+        <Col md={4} className="project-card">
+          <ProjectCard
+            imgPath={foodOrdering}
+            isBlog={false}
+            title="FoodieHub"
+            description="Developed a responsive food ordering platform using React.js with category-based browsing, dynamic food listings, shopping cart, and wishlist functionality. Implemented tab-based menu navigation, interactive sliders, 'Load More' pagination, and smooth scroll animations using Framer Motion. Focused on creating an engaging user experience with intuitive navigation, responsive layouts, and modern UI design patterns."
+            ghLink="https://github.com/YOUR_USERNAME/foodiehub"
+            demoLink="https://your-demo-link.com"
+          />
+        </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={leaf}
