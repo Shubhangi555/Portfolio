@@ -13,38 +13,39 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
-              reliable, scalable products. Over time, I’ve explored several
-              technologies and found my passion in building high-performance
-              systems and intuitive user experiences.
+              I'm a React Developer passionate about building modern, scalable, and
+              user-friendly web applications.
               <br />
               <br />
-              I’m proficient in
+              With experience in
               <i>
                 <b className="purple">
                   {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
+                  JavaScript, TypeScript, React.js, Redux Toolkit, React Query, and REST
+                  APIs
                 </b>
               </i>
-              — and I enjoy working across both backend and frontend stacks.
+              , I focus on developing high-quality frontend solutions that provide seamless
+              user experiences.
               <br />
               <br />
-              My key areas of interest include developing
+              I enjoy creating reusable components, optimizing application performance, and
+              writing clean, maintainable code.
+              <br />
+              <br />
+              My preferred tech stack includes
               <i>
                 <b className="purple">
                   {" "}
-                  Web Applications, Blockchain Solutions,{" "}
+                  React.js, Next.js, Material UI, Tailwind CSS, Git, and modern web
+                  technologies
                 </b>
               </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
+              .
               <br />
               <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
-              <i>
-                <b className="purple">React.js</b> and{" "}
-                <b className="purple">Next.js</b>.
-              </i>
+              I'm always eager to learn, collaborate, and take on new challenges that help
+              me grow as a developer.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
