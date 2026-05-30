@@ -8,6 +8,7 @@ import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
+import bitsOfCode from "../../Assets/Projects/project1.png";
 
 function Projects() {
   return (
@@ -17,21 +18,18 @@ function Projects() {
         <h1 className="project-heading">
           My Recent <strong className="purple">Works </strong>
         </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
+       <p style={{ color: "white" }}> A showcase of web applications and digital solutions I've built using React, JavaScript, PHP, MySQL, and modern frontend technologies. </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
-            />
-          </Col>
-
+        <Col md={4} className="project-card">
+          <ProjectCard
+            imgPath={project1}
+            isBlog={false}
+            title="CSC Service Portal"
+            description="Developed a production-ready CSC (Common Service Center) service portal using React.js, PHP, and MySQL. Built a fully responsive and mobile-friendly interface with multilingual support (English & Marathi), light/dark theme switching, dynamic blog management, service listings, and contact inquiry forms. Optimized website performance, accessibility, and SEO to improve search visibility and user engagement. Successfully deployed and maintained the application on Hostinger, ensuring a seamless experience across desktop, tablet, and mobile devices."
+            ghLink="#"
+            demoLink="https://shreeservz.com"
+          />
+        </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={bitsOfCode}
