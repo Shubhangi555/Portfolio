@@ -6,7 +6,7 @@ import leaf from "../../Assets/Projects/leaf.png";
 import emotion from "../../Assets/Projects/emotion.png";
 import editor from "../../Assets/Projects/codeEditor.png";
 import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import taskDashboard from "../../Assets/Projects/taskDashboard.png";
 import project1 from "../../Assets/Projects/project1.png";
 
 function Projects() {
@@ -29,17 +29,16 @@ function Projects() {
             demoLink="https://shreeservz.com"
           />
         </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
-
+        <Col md={4} className="project-card">
+          <ProjectCard
+            imgPath={taskDashboard}
+            isBlog={false}
+            title="TaskFlow Dashboard"
+            description="Developed a modern task management dashboard inspired by tools like Zoho and Jira using React.js and Valtio for state management. Features include task creation and assignment, status tracking (Backlog, In Progress, Done), custom tags, drag-and-drop functionality, Kanban and List views, and customizable dashboard themes. Built with a focus on performance, intuitive user experience, and scalable state management."
+            ghLink="https://github.com/YOUR_USERNAME/taskflow-dashboard"
+            demoLink="https://your-demo-link.com"
+          />
+        </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={editor}
