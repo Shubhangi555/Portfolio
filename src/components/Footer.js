@@ -26,7 +26,7 @@ function Footer() {
 
             <li className="social-icons">
               <a
-                href="https://github.com/YOUR_USERNAME"
+                href="https://github.com/Shubhangi555"
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -37,7 +37,7 @@ function Footer() {
 
             <li className="social-icons">
               <a
-                href="https://www.linkedin.com/in/YOUR_LINKEDIN"
+                href="https://www.linkedin.com/in/shubhangi-bhosale"
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -46,16 +46,16 @@ function Footer() {
               </a>
             </li>
 
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/YOUR_INSTAGRAM"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillInstagram />
-              </a>
-            </li>
+            // <li className="social-icons">
+            //   <a
+            //     href="https://www.instagram.com/YOUR_INSTAGRAM"
+            //     style={{ color: "white" }}
+            //     target="_blank"
+            //     rel="noopener noreferrer"
+            //   >
+            //     <AiFillInstagram />
+            //   </a>
+            // </li>
 
           </ul>
         </Col>
