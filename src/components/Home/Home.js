@@ -30,7 +30,7 @@ function Home() {
 
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name"> SOUMYAJIT BEHERA</strong>
+                <strong className="main-name"> SHUBHANGI BHOSALE</strong>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
@@ -61,7 +61,7 @@ function Home() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/soumyajit4419"
+                  href="https://github.com/Shubhangi555"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -69,19 +69,19 @@ function Home() {
                   <AiFillGithub />
                 </a>
               </li>
+              // <li className="social-icons">
+              //   <a
+              //     href="https://twitter.com/shubhangi"
+              //     target="_blank"
+              //     rel="noreferrer"
+              //     className="icon-colour  home-social-icons"
+              //   >
+              //     <AiOutlineTwitter />
+              //   </a>
+              // </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/Soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
+                  href="https://www.linkedin.com/in/shubhangi-bhosale-853144244/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -89,16 +89,16 @@ function Home() {
                   <FaLinkedinIn />
                 </a>
               </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
+              // <li className="social-icons">
+              //   <a
+              //     href="https://www.instagram.com/shubhangi123"
+              //     target="_blank"
+              //     rel="noreferrer"
+              //     className="icon-colour home-social-icons"
+              //   >
+              //     <AiFillInstagram />
+              //   </a>
+              // </li>
             </ul>
           </Col>
         </Row>
