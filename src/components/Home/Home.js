@@ -69,16 +69,6 @@ function Home() {
                   <AiFillGithub />
                 </a>
               </li>
-              // <li className="social-icons">
-              //   <a
-              //     href="https://twitter.com/shubhangi"
-              //     target="_blank"
-              //     rel="noreferrer"
-              //     className="icon-colour  home-social-icons"
-              //   >
-              //     <AiOutlineTwitter />
-              //   </a>
-              // </li>
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/shubhangi-bhosale-853144244/"
@@ -89,16 +79,6 @@ function Home() {
                   <FaLinkedinIn />
                 </a>
               </li>
-              // <li className="social-icons">
-              //   <a
-              //     href="https://www.instagram.com/shubhangi123"
-              //     target="_blank"
-              //     rel="noreferrer"
-              //     className="icon-colour home-social-icons"
-              //   >
-              //     <AiFillInstagram />
-              //   </a>
-              // </li>
             </ul>
           </Col>
         </Row>
