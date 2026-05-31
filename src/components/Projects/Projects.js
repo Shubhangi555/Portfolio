@@ -5,7 +5,8 @@ import Particle from "../Particle";
 import foodOrdering from "../../Assets/Projects/foodOrdering.png";
 import taskDashboard from "../../Assets/Projects/taskDashboard.png";
 import project1 from "../../Assets/Projects/project1.png";
-
+import liveChat from "../../Assets/Projects/liveChat.png;
+  
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -40,10 +41,20 @@ function Projects() {
           <ProjectCard
             imgPath={foodOrdering}
             isBlog={false}
-            title="FoodieHub"
+            title="FoodKing"
             description="Developed a responsive food ordering platform using React.js with category-based browsing, dynamic food listings, shopping cart, and wishlist functionality. Implemented tab-based menu navigation, interactive sliders, 'Load More' pagination, and smooth scroll animations using Framer Motion. Focused on creating an engaging user experience with intuitive navigation, responsive layouts, and modern UI design patterns."
             ghLink="https://github.com/YOUR_USERNAME/foodiehub"
             demoLink="https://your-demo-link.com"
+          />
+        </Col>
+        <Col md={4} className="project-card">
+          <ProjectCard
+            imgPath={liveChat}
+            isBlog={false}
+            title="LiveChatAPP"
+            description="A full-stack real-time chat application built with TypeScript, React, and WebSockets. Features JWT authentication, multi-room messaging, live typing indicators, and auto-reconnect logic."
+            ghLink="https://github.com/YOUR_USERNAME/foodiehub"
+            demoLink="https://live-chat-app-blue.vercel.app/"
           />
         </Col>
         </Row>
