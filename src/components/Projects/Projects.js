@@ -5,7 +5,7 @@ import Particle from "../Particle";
 import foodOrdering from "../../Assets/Projects/foodOrdering.png";
 import taskDashboard from "../../Assets/Projects/taskDashboard.png";
 import project1 from "../../Assets/Projects/project1.png";
-import liveChat from "../../Assets/Projects/liveChat.png;
+import liveChat from "../../Assets/Projects/liveChat.png";
   
 function Projects() {
   return (
