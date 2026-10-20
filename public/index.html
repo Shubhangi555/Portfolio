@@ -3,38 +3,53 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
+  <meta name="theme-color" content="#f2eee5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f0e0c" media="(prefers-color-scheme: dark)" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <title>Shubhangi Bhosale | Portfolio</title>
-  <meta name="description" content="Self Developed personal website build with React.js">
 
-  <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="Shubhangi Bhosale | Portfolio">
-  <meta itemprop="description" content="Self Developed personal website build with React.js">
-  <meta itemprop="image"
-    content="https://raw.githubusercontent.com/Shubhangi555/Portfolio/master/Images/readme-img.png?token=AK7VCIF5RYEUZZAURELPTAC76U6AK">
+  <title>Shubhangi Bhosale — React Developer</title>
+  <meta name="description"
+    content="Shubhangi Bhosale is a React developer at Arcitech in Navi Mumbai, building production apps with React, Next.js, TypeScript, Redux Toolkit and React Query." />
+  <link rel="canonical" href="https://shubhangibhosale.vercel.app/" />
 
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://shubhangibhosale.vercel.app">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Shubhangi Bhosale | Portfolio">
-  <meta property="og:description" content="Self Developed personal website build with React.js">
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/Shubhangi555/Portfolio/master/Images/readme-img.png?token=AK7VCIF5RYEUZZAURELPTAC76U6AK">
+  <!-- Social preview (absolute URLs required by most crawlers) -->
+  <meta property="og:url" content="https://shubhangibhosale.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shubhangi Bhosale — React Developer" />
+  <meta property="og:description" content="React developer at Arcitech — experience, selected work, toolkit and résumé." />
+  <meta property="og:image" content="https://shubhangibhosale.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Shubhangi Bhosale — React Developer at Arcitech" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shubhangi Bhosale — React Developer" />
+  <meta name="twitter:description" content="React developer at Arcitech — experience, selected work, toolkit and résumé." />
+  <meta name="twitter:image" content="https://shubhangibhosale.vercel.app/og-image.png" />
 
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Shubhangi Bhosale | Portfolio">
-  <meta name="twitter:description" content="Self Developed personal website build with React.js">
-  <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/Shubhangi555/Portfolio/master/Images/readme-img.png?token=AK7VCIF5RYEUZZAURELPTAC76U6AK">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Apply saved theme before first paint to avoid a light/dark flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("sb-theme");
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) { /* storage blocked — CSS default (paper) applies */ }
+    })();
+  </script>
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <noscript>This portfolio needs JavaScript enabled.</noscript>
   <div id="root"></div>
 </body>
 

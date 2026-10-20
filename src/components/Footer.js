@@ -1,54 +1,40 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import {
-  AiFillGithub
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FiArrowUp } from "react-icons/fi";
+import { profile } from "../data";
+import { scrollToId } from "./useSectionNav";
 
 function Footer() {
-  let date = new Date();
-  let year = date.getFullYear();
+  const year = new Date().getFullYear();
 
   return (
-    <Container fluid className="footer">
-      <Row>
-        <Col md="4" className="footer-copywright">
-          <h3>Designed & Developed by Shubhangi Bhosale</h3>
-        </Col>
-
-        <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} SB</h3>
-        </Col>
-
-        <Col md="4" className="footer-body">
-          <ul className="footer-icons">
-
-            <li className="social-icons">
-              <a
-                href="https://github.com/Shubhangi555"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillGithub />
-              </a>
-            </li>
-
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/shubhangi-bhosale"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-
-          </ul>
-        </Col>
-      </Row>
-    </Container>
+    <footer className="footer">
+      <div className="footer__colophon">
+        <span className="eyebrow">Colophon</span>
+        <p>
+          Designed &amp; hand-built by {profile.firstName} {profile.lastName}.
+          Set in Instrument Serif, Space Grotesk and JetBrains Mono. Built with
+          React — press <kbd>Ctrl</kbd> <kbd>K</kbd> anywhere.
+        </p>
+      </div>
+      <div className="footer__bar">
+        <span>© {year} {profile.initials}</span>
+        <span className="footer__social">
+          <a href={profile.github} target="_blank" rel="noopener noreferrer" className="link-u">
+            GitHub
+          </a>
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="link-u">
+            LinkedIn
+          </a>
+        </span>
+        <button type="button" className="footer__top" onClick={() => scrollToId("top") || window.scrollTo(0, 0)}>
+          Back to top <FiArrowUp aria-hidden="true" />
+        </button>
+      </div>
+      <div className="footer__giant" aria-hidden="true">
+        {profile.firstName.toLowerCase()}
+        <i>.</i>
+      </div>
+    </footer>
   );
 }
 

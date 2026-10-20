@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+// Reset scroll on route change, unless a section scroll was requested.
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, state } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!state || !state.scrollTo) window.scrollTo(0, 0);
+  }, [pathname, state]);
   return null;
 }
 

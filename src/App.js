@@ -1,48 +1,85 @@
-import React, { useState, useEffect } from "react";
-import Preloader from "../src/components/Pre";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import Footer from "./components/Footer";
-import Resume from "./components/Resume/ResumeNew";
+import React, { useState, useEffect, useCallback, lazy, Suspense } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate
+  Navigate,
 } from "react-router-dom";
+import Preloader from "./components/Pre";
+import Header from "./components/Navbar";
+import CommandPalette from "./components/CommandPalette";
+import Home from "./components/Home/Home";
+import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import { useTheme } from "./hooks";
 import "./style.css";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
+// PDF tooling is heavy — only fetch it when someone opens the résumé.
+const Resume = lazy(() => import("./components/Resume/ResumeNew"));
 
 function App() {
-  const [load, upadateLoad] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const [paletteOpen, setPaletteOpen] = useState(false);
+  const [theme, toggleTheme] = useTheme();
+  // Stable reference so the preloader's animation effect doesn't restart on re-render.
+  const finishLoading = useCallback(() => setLoading(false), []);
 
+  // Global shortcut: Ctrl/⌘ + K opens the command palette.
   useEffect(() => {
-    const timer = setTimeout(() => {
-      upadateLoad(false);
-    }, 1200);
-
-    return () => clearTimeout(timer);
+    const onKey = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setPaletteOpen((o) => !o);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, []);
 
   return (
     <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
+      {loading && <Preloader onDone={finishLoading} />}
+      <div className="app" aria-busy={loading}>
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
+        <Header
+          theme={theme}
+          onToggleTheme={toggleTheme}
+          onOpenPalette={() => setPaletteOpen(true)}
+        />
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
+        <main id="main">
+          <Routes>
+            <Route path="/" element={<Home ready={!loading} theme={theme} />} />
+            <Route
+              path="/resume"
+              element={
+                <Suspense fallback={<div className="section resume__loading">Loading résumé…</div>}>
+                  <Resume />
+                </Suspense>
+              }
+            />
+            {/* Legacy routes from the old multi-page layout */}
+            <Route
+              path="/about"
+              element={<Navigate to="/" state={{ scrollTo: "about" }} replace />}
+            />
+            <Route
+              path="/project"
+              element={<Navigate to="/" state={{ scrollTo: "work" }} replace />}
+            />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
         <Footer />
       </div>
+      <CommandPalette
+        open={paletteOpen}
+        onClose={() => setPaletteOpen(false)}
+        onToggleTheme={toggleTheme}
+        theme={theme}
+      />
     </Router>
   );
 }
