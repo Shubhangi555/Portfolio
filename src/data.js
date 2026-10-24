@@ -13,7 +13,6 @@ import Typescript from "./Assets/TechIcons/Typescript.svg";
 import ReactIcon from "./Assets/TechIcons/React.svg";
 import Redux from "./Assets/TechIcons/Redux.svg";
 import Node from "./Assets/TechIcons/Node.svg";
-import Next from "./Assets/TechIcons/Next.svg";
 import Tailwind from "./Assets/TechIcons/Tailwind.svg";
 import MUI from "./Assets/TechIcons/MUI.svg";
 import SQL from "./Assets/TechIcons/SQL.svg";
@@ -41,14 +40,14 @@ export const profile = {
 // Every figure here comes straight from the résumé — keep it that way.
 export const impact = [
   { value: "1.5+", label: "years shipping production React" },
-  { value: "25+", label: "REST APIs integrated with React Query & RTK" },
-  { value: "6", label: "business modules delivered at Arcitech" },
-  { value: "★", label: "Silver Club award for consistent delivery" },
+  { value: "30+", label: "REST APIs integrated with TanStack Query & RTK" },
+  { value: "7+", label: "production modules across 3 client projects" },
+  { value: "200+", label: "bugs resolved in a single production project" },
 ];
 
 export const about = {
   body: [
-    "I'm a React developer in Navi Mumbai, currently building production software at Arcitech. My day-to-day is React, Next.js and TypeScript, with Redux Toolkit and React Query handling the hard parts of state — caching, mutations, and keeping the UI honest about what the server knows.",
+    "I'm a React developer in Navi Mumbai, currently building production software at Arcitech. My day-to-day is React and TypeScript, with Redux Toolkit and TanStack Query handling the hard parts of state — caching, mutations, and keeping the UI honest about what the server knows.",
     "I care about the parts users never notice: reusable components, controlled re-renders, code-split routes, and code the next developer can read without a map.",
   ],
   offClock: [
@@ -68,22 +67,26 @@ export const experience = [
     place: "Navi Mumbai",
     current: true,
     summary:
-      "Building scalable, production-ready products with React, Next.js, TypeScript, Redux Toolkit and React Query.",
+      "Building and maintaining production web applications with React, TypeScript, Redux Toolkit and TanStack Query across 3 client projects.",
     modules: [
       "Marketplace",
       "Admin access / RBAC",
       "Analytics & charts",
       "OCR / document processing",
+      "Book a meeting",
       "Voice submission",
       "Assignment management",
     ],
     points: [
-      "Integrated 25+ REST APIs with React Query and Redux Toolkit — caching, mutations, error handling and server-state sync.",
-      "Improved performance through memoisation, controlled re-renders, optimised API calls, code splitting and lazy loading.",
-      "Shipped WebSocket real-time features and AI-powered workflows; integrated GreytHR, Hubstaff, Google Meet, email and calendar services.",
-      "Diagnosed UI, API, state and integration issues end-to-end, working with product, design, backend and QA in Agile sprints.",
+      "Delivered 7+ production modules across 3 client projects using React and TypeScript.",
+      "Built interactive data visualisations with Recharts and integrated Driver.js for guided, step-by-step product tours for new users.",
+      "Integrated 30+ REST APIs with TanStack Query and Redux Toolkit — data fetching, caching, mutations, async state and error handling.",
+      "Resolved 200+ bugs in a single production project across UI, API, state-management and integration issues, using root-cause analysis and browser debugging.",
+      "Improved performance through memoisation, controlled re-renders, code splitting and lazy loading; built reusable components, custom hooks and shared utilities used across modules.",
+      "Implemented SSE-based streaming for AI-generated scorecard results and WebSocket-based real-time features; integrated GreytHR, Hubstaff, Google Meet, email and calendar services.",
+      "Worked in Agile sprints with product, design, backend and QA teams to ship and maintain features in production.",
     ],
-    award: "Silver Club — recognised for consistent performance and delivery",
+    award: "Xcel Silver Club Certificate of Achievement — Arcitech, April 2026",
   },
   {
     version: "v1.0",
@@ -94,9 +97,10 @@ export const experience = [
     summary:
       "Turned business requirements and Figma / Adobe XD designs into pixel-accurate, responsive client interfaces.",
     points: [
-      "Built reusable React components and responsive layouts with TypeScript and Tailwind CSS.",
-      "Kept interfaces accessible and consistent across browsers; fixed layout bugs and browser inconsistencies with DevTools.",
-      "Worked alongside developers and designers through implementation, testing and feedback cycles.",
+      "Built responsive client-facing interfaces with React.js, TypeScript, Tailwind CSS, HTML5, CSS3 and jQuery.",
+      "Converted Figma and Adobe XD designs into pixel-accurate, cross-browser-compatible layouts.",
+      "Created reusable React components that kept the UI consistent and reduced repeated code.",
+      "Fixed layout, responsiveness and browser-compatibility bugs using Chrome DevTools, and collaborated with designers and developers through feedback cycles.",
     ],
   },
 ];
@@ -123,7 +127,16 @@ export const projects = [
   {
     title: "AI Interview Simulator",
     kind: "Product · Concept",
-    tags: ["React", "TypeScript", "React Query", "Web Speech API", "Zod", "Vercel" ],
+    tags: [
+      "React",
+      "TypeScript",
+      "TanStack Query",
+      "Gemini API",
+      "Web Speech API",
+      "Express",
+      "Zod",
+      "Vercel",
+    ],
     image: aiinterview,
     summary:
       "A voice-first mock interview app: answer AI-generated questions out loud, get live transcription, rubric-based feedback on every answer, interviewer follow-ups, and a personalised report that tracks your progress over time.",
@@ -131,7 +144,7 @@ export const projects = [
       "Live speech-to-text with audio recording and a real-time mic level meter",
       "AI scoring per answer (relevance, structure, depth, communication) with follow-up questions",
       "Personalised end-of-session report with a practice plan, plus history and a score trend chart",
-      " light and dark themes; accessible and mobile-friendly",
+      "Light and dark themes; accessible and mobile-friendly",
       "Demo mode with a 95-question, role-aware bank (no API key needed); live mode uses Gemini through a secure server proxy",
     ],
     live: "https://ai-interview-simulator-live.vercel.app/",
@@ -140,7 +153,16 @@ export const projects = [
   {
     title: "Pennywise - Expense Tracker",
     kind: "Full-stack",
-    tags: ["React", "TypeScript", "React Query", "Express", "PostgreSQL"],
+    tags: [
+      "React",
+      "TypeScript",
+      "Express",
+      "PostgreSQL",
+      "JWT",
+      "Recharts",
+      "Vercel",
+      "Render",
+    ],
     image: pennywise,
     summary:
       "A deployed personal finance app: track income and expenses, set monthly budgets per category, and search, filter and export your history, with every user's data isolated and validated server-side.",
@@ -148,7 +170,7 @@ export const projects = [
       "Secure REST API: bcrypt + JWT auth, rate-limited login, per-user data isolation",
       "Budgets with live progress, plus custom categories per user",
       "Search, filters, infinite scroll and CSV export",
-      "Accessible charts, dark mode and mobile layout",
+      "Interactive Recharts dashboards for spending trends and categories, with dark mode and mobile layout",
       "Live on Vercel + Render + Neon Postgres, with versioned DB migrations",
     ],
     live: "https://penny-wise-live.vercel.app/",
@@ -205,13 +227,13 @@ export const projects = [
 // Items without an `icon` render a monogram tile.
 export const stack = [
   { name: "react", label: "React.js", icon: ReactIcon, level: "^18.3.0" },
-  { name: "next", label: "Next.js", icon: Next, level: "^14.2.0" },
   { name: "typescript", label: "TypeScript", icon: Typescript, level: "^5.4.0" },
   { name: "javascript", label: "JavaScript", icon: Javascript, level: "ES2024" },
   { name: "@reduxjs/toolkit", label: "Redux Toolkit", icon: Redux, level: "^2.2.0" },
-  { name: "@tanstack/react-query", label: "React Query", mono: "RQ", level: "^5.0.0" },
+  { name: "@tanstack/react-query", label: "TanStack Query", mono: "RQ", level: "^5.0.0" },
   { name: "@mui/material", label: "Material UI", icon: MUI, level: "^5.15.0" },
   { name: "tailwindcss", label: "Tailwind CSS", icon: Tailwind, level: "^3.4.0" },
+  { name: "realtime", label: "SSE / WebSocket", mono: "WS", level: "live" },
   { name: "express", label: "Node / Express", icon: Node, level: "^4.19.0" },
   { name: "pg", label: "PostgreSQL / MySQL", icon: SQL, level: "^8.11.0" },
 ];
@@ -219,8 +241,9 @@ export const stack = [
 export const tools = [
   { name: "vscode", label: "VS Code", icon: VSCode },
   { name: "chrome-devtools", label: "DevTools", icon: Chrome },
-  { name: "git", label: "Git", icon: Git },
+  { name: "git", label: "Git / GitHub", icon: Git },
   { name: "postman", label: "Postman", icon: Postman },
+  { name: "hoppscotch", label: "Hoppscotch", mono: "H" },
   { name: "vercel", label: "Vercel", mono: "▲" },
   { name: "figma", label: "Figma", mono: "F" },
 ];
