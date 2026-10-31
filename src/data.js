@@ -203,8 +203,8 @@ export const projects = [
       "Proxy-based state with Valtio",
       "Customisable dashboard themes",
     ],
-    live: "https://your-demo-link.com",
-    code: "https://github.com/YOUR_USERNAME/taskflow-dashboard",
+    live: "https://valtiotaskmanagement.vercel.app",
+    code: "#",
   },
   {
     title: "FoodKing",
