@@ -194,7 +194,7 @@ export const projects = [
   {
     title: "TaskFlow Dashboard",
     kind: "Product · Concept",
-    tags: ["React", "Valtio", "DnD"],
+    tags: ["React", "Valtio"],
     image: taskDashboard,
     summary:
       "A task management dashboard in the spirit of Jira and Zoho — task assignment, status tracking, custom tags and switchable Kanban / List views.",
